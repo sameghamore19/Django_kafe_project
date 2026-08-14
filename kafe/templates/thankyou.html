@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Thank You</title>
+
+```
+<style>
+
+    body{
+        margin:0;
+        font-family:Arial,sans-serif;
+        background:#f5ebe0;
+        text-align:center;
+    }
+
+    .container{
+        padding:60px 20px;
+    }
+
+    h1{
+        color:#6f4e37;
+        font-size:45px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .message{
+        font-size:20px;
+        max-width:700px;
+        margin:auto;
+        line-height:1.8;
+    }
+
+    .coffee{
+        font-size:70px;
+        animation: float 2s ease-in-out infinite;
+    }
+
+    .gallery{
+        display:flex;
+        justify-content:center;
+        gap:20px;
+        flex-wrap:wrap;
+        margin-top:40px;
+    }
+
+    .card{
+        background:white;
+        width:250px;
+        padding:20px;
+        border-radius:15px;
+        box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+        overflow:hidden;
+        transition:0.3s;
+    }
+.card:hover{
+    transform:translateY(-10px);
+}
+    .card img{
+        width:220px;
+        height:170px;
+        border-radius:10px;
+        object-fit:cover;
+    }
+    .card:hover img{
+    transform:scale(1.05);
+}
+
+    .btn{
+        display:inline-block;
+        margin-top:40px;
+        background:#6f4e37;
+        color:white;
+        text-decoration:none;
+        padding:12px 25px;
+        border-radius:8px;
+    }
+
+    .btn:hover{
+        transform:scale(1.05);
+    }
+
+    @keyframes float{
+        0%{transform:translateY(0);}
+        50%{transform:translateY(-15px);}
+        100%{transform:translateY(0);}
+    }
+
+    @keyframes fadeIn{
+        from{opacity:0;}
+        to{opacity:1;}
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<div class="coffee">☕</div>
+
+<h1>Thank You For Visiting</h1>
+
+<div class="message">
+    <p>
+        Welcome to my first Django website.
+    </p>
+
+    <p>
+        This project was created as part of my learning journey in web development.
+        Thank you for taking the time to explore my Aesthetic Cafe website.
+    </p>
+
+    <p>
+        Every expert was once a beginner. ☕❤️
+    </p>
+</div>
+
+<h2>Gallery</h2>
+
+<div class="gallery">
+
+    <div class="card">
+        <img src="/static/images/coffee.jpg">
+        <h3>☕ Cappuccino</h3>
+        <p>Fresh and creamy coffee.</p>
+    </div>
+
+    <div class="card">
+        <img src="/static/images/latte.jpg">
+        <h3>☕ Latte</h3>
+        <p>Beautiful latte art.</p>
+    </div>
+
+    <div class="card">
+        <img src="/static/images/cake.jpg">
+        <h3>🍰 Cheesecake</h3>
+        <p>Sweet and delicious dessert.</p>
+    </div>
+
+    <div class="card">
+        <img src="/static/images/muffin.jpg">
+        <h3>🧁 Muffin</h3>
+        <p>Soft baked perfection.</p>
+    </div>
+
+</div>
+
+<a href="/contact/" class="btn">
+    ❤️ Contact & Gratitude
+</a>
+```
+
+</div>
+
+</body>
+</html>

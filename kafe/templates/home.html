@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aesthetic Cafe</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:#f5ebe0;
+        }
+
+        .hero{
+            text-align:center;
+            padding:100px 20px;
+            background:#d5bdaf;
+        }
+
+        .hero h1{
+            font-size:50px;
+            color:#432818;
+        }
+
+        .hero p{
+            font-size:20px;
+        }
+
+        .btn{
+            background:#6f4e37;
+            color:white;
+            padding:12px 25px;
+            border:none;
+            border-radius:8px;
+            text-decoration:none;
+        }
+
+        h2{
+            text-align:center;
+            color:#432818;
+        }
+
+        .menu-container{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+            padding:30px;
+        }
+
+        .card{
+            background:white;
+            width:200px;
+            padding:20px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .about{
+            text-align:center;
+            padding:50px 20px;
+            background:#e3d5ca;
+        }
+
+        .order{
+            text-align:center;
+            padding:50px 20px;
+        }
+
+        input{
+            width:300px;
+            padding:12px;
+            margin:10px;
+            border-radius:8px;
+            border:1px solid #ccc;
+        }
+
+        .submit-btn{
+            background:#6f4e37;
+            color:white;
+            padding:12px 30px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+        }
+
+        .success{
+            color:green;
+            font-weight:bold;
+            margin-bottom:20px;
+        }
+
+        footer{
+            background:#432818;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <h1>☕ Aesthetic Cafe</h1>
+        <p>Fresh Coffee • Sweet Desserts • Cozy Vibes</p>
+
+        <a href="#menu" class="btn">
+            View Menu
+        </a>
+    </div>
+
+    <section id="menu">
+
+        <h2>Our Menu</h2>
+
+        <div class="menu-container">
+
+            <div class="card">
+                <h3>☕ Cappuccino</h3>
+                <p>₹120</p>
+            </div>
+
+            <div class="card">
+                <h3>☕ Latte</h3>
+                <p>₹140</p>
+            </div>
+
+            <div class="card">
+                <h3>🍰 Cheesecake</h3>
+                <p>₹180</p>
+            </div>
+
+            <div class="card">
+                <h3>🧁 Muffin</h3>
+                <p>₹90</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            Welcome to Aesthetic Cafe, a cozy place where coffee,
+            desserts and beautiful vibes come together.
+        </p>
+
+        <p>
+            Open Daily: 8:00 AM – 10:00 PM
+        </p>
+
+    </section>
+
+    <section class="order">
+
+        <h2>Place Your Order</h2>
+
+        {% if success %}
+            <p class="success">
+                {{ success }}
+            </p>
+        {% endif %}
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <input type="text" name="name" placeholder="Your Name">
+
+            <br>
+
+            <input type="text" name="phone" placeholder="Phone Number">
+
+            <br>
+
+            <input type="text" name="item" placeholder="Menu Item">
+
+            <br><br>
+
+            <button type="submit" class="submit-btn">
+                Submit Order
+            </button>
+
+        </form>
+
+    </section>
+    <div style="text-align:center; margin-top:40px;">
+
+    <a href="/thankyou/" class="btn">
+        ✨ Visit Gallery & Message
+    </a>
+
+</div>
+
+    <footer>
+        ☕ Aesthetic Cafe © 2026
+    </footer>
+
+</body>
+</html>
